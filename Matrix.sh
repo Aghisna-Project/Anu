@@ -2,6 +2,7 @@
 
 # Array berisi pasangan URL git, branch, dan direktori tujuan
 declare -A repos=(
+    ["https://github.com/Aghisna-Project/Aghisna_rev -b build"]="kernel/xiaomi/sm6150"
     ["https://github.com/Aghisna-Project/device_xiaomi_sm6150-common -b 15"]="device/xiaomi/sm6150-common"
     ["https://github.com/Aghisna-Project/device_xiaomi_sweet -b 15"]="device/xiaomi/sweet"
     ["https://github.com/Aghisna-Project/vendor_xiaomi_sm6150-common -b 15"]="vendor/xiaomi/sm6150-common"
