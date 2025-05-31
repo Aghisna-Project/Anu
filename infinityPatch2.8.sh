@@ -1,0 +1,39 @@
+#!/bin/bash
+set -e
+
+# Menentukan direktori utama skrip (/inf)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+echo "Direktori utama: $SCRIPT_DIR"
+
+PATCH_URL="https://raw.githubusercontent.com/Aghisna-Project/Anu/main/0001-add-back-etar-and-twelve.patch"
+PATCH_FILE="0001-add-back-etar-and-twelve.patch"
+PATCH_DEST="$SCRIPT_DIR/vendor/infinity/config/$PATCH_FILE"
+
+# Pindah ke direktori utama
+cd "$SCRIPT_DIR"
+
+echo "Cloning aplikasi Musik dan Kalender..."
+git clone https://github.com/LineageOS/android_packages_apps_Twelve.git -b lineage-22.2 "$SCRIPT_DIR/packages/apps/Twelve"
+git clone https://github.com/LineageOS/android_packages_apps_Etar.git -b lineage-22.2 "$SCRIPT_DIR/packages/apps/Etar"
+
+echo "Mengunduh patch..."
+curl -L -o "$PATCH_FILE" "$PATCH_URL"
+mv "$PATCH_FILE" "$PATCH_DEST"
+
+echo "Clone dan download patch selesai. Revert ikon dimulai..."
+
+cd "$SCRIPT_DIR/packages/apps/Messaging"
+git reset --hard HEAD~2
+
+cd "$SCRIPT_DIR/packages/apps/Dialer"
+git reset --hard HEAD~1
+
+cd "$SCRIPT_DIR/packages/apps/Contacts"
+git reset --hard HEAD~1
+
+echo "Revert ikon selesai. Menerapkan patch..."
+
+cd "$SCRIPT_DIR/vendor/infinity"
+git am "config/$PATCH_FILE"
+
+echo "Semua proses selesai."
