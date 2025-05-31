@@ -1,0 +1,29 @@
+From 0ea43d5e4f4c94b15fadfcfcb8c2539f6804d0ac Mon Sep 17 00:00:00 2001
+From: RooGhz720 <RooGhz720@gmail.com>
+Date: Sun, 1 Jun 2025 03:43:25 +0800
+Subject: [PATCH] add back etar and twelve
+
+Signed-off-by: RooGhz720 <RooGhz720@gmail.com>
+---
+ config/common_mobile_full.mk | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/config/common_mobile_full.mk b/config/common_mobile_full.mk
+index 737a22b7..34d1fd25 100644
+--- a/config/common_mobile_full.mk
++++ b/config/common_mobile_full.mk
+@@ -3,6 +3,11 @@ $(call inherit-product, vendor/infinity/config/common_mobile.mk)
+ 
+ PRODUCT_SIZE := full
+ 
++# Apps
++PRODUCT_PACKAGES += \
++    Twelve \
++    Etar \
++
+ ifneq ($(PRODUCT_NO_CAMERA),true)
+ PRODUCT_PACKAGES += \
+     Aperture
+-- 
+2.34.1
+
