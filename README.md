@@ -1,14 +1,13 @@
 # SATSET
 
 ```bash
-wget -O infinityPatch2.8.sh https://raw.githubusercontent.com/Aghisna-Project/Anu/main/infinityPatch2.8.sh
-
+wget -O infinityPatchByAghisna.sh.sh https://raw.githubusercontent.com/Aghisna-Project/Anu/main/infinityPatchByAghisna.sh.sh
 ```
 
 ```bash
-chmod +x infinityPatch2.8.sh
+chmod +x infinityPatchByAghisna.sh.sh
 ```
 
 ```bash
-./infinityPatch2.8.sh
+./infinityPatchByAghisna.sh.sh
 ```
