@@ -39,18 +39,4 @@ git reset --hard HEAD~1
 cd "$SCRIPT_DIR/packages/apps/Contacts"
 git reset --hard HEAD~1
 
-echo "Revert ikon selesai. Menerapkan patch..."
-
-cd "$SCRIPT_DIR/vendor/infinity"
-git am "config/$PATCH_FILE"
-
-echo "clone device tree"
-sleep 10
-git clone https://github.com/Aghisna-Project/android_hardware_xiaomi.git -b 15-new "$SCRIPT_DIR/hardware/xiaomi"
-git clone https://github.com/Aghisna-Project/Vantom_barnul_sm6150.git "$SCRIPT_DIR/kernel/xiaomi/sm6150"
-git clone https://gitea.com/RooGhz720/leica-sweet.git "$SCRIPT_DIR/vendor/xiaomi/sweet-miuicamera"
-git clone https://gitea.com/RooGhz720/device_xiaomi_sm6150-common.git -b 15 "$SCRIPT_DIR/device/xiaomi/sm6150-common"
-git clone https://gitea.com/RooGhz720/device_xiaomi_sweet.git -b 15-new "$SCRIPT_DIR/device/xiaomi/sweet"
-git clone https://gitea.com/RooGhz720/vendor_xiaomi_sm6150-common.git "$SCRIPT_DIR/vendor/xiaomi/sm6150-common"
-git clone https://gitea.com/RooGhz720/vendor_xiaomi_sweet.git "$SCRIPT_DIR/vendor/xiaomi/sweet"
 echo "Semua proses selesai."
