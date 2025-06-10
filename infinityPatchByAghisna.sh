@@ -20,8 +20,8 @@ rm -rf "$SCRIPT_DIR/hardware/xiaomi"
 sleep 5
 
 echo "Cloning aplikasi"
-git clone https://github.com/LineageOS/android_packages_apps_Twelve.git -b lineage-22.2 "$SCRIPT_DIR/packages/apps/Twelve"
-git clone https://github.com/LineageOS/android_packages_apps_Etar.git -b lineage-22.2 "$SCRIPT_DIR/packages/apps/Etar"
+git clone https://github.com/LineageOS/android_packages_apps_Twelve.git -b lineage-22.1 "$SCRIPT_DIR/packages/apps/Twelve"
+git clone https://github.com/LineageOS/android_packages_apps_Etar.git -b lineage-22.1 "$SCRIPT_DIR/packages/apps/Etar"
 git clone https://github.com/Aghisna-Project/vendor_extras.git -b 15 "$SCRIPT_DIR/vendor/extras"
 
 # echo "Mengunduh patch..."
