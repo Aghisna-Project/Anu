@@ -1,0 +1,26 @@
+From 3985e75a8161ce5d2547c9c19776010d3bb69338 Mon Sep 17 00:00:00 2001
+From: RooGhz720 <RooGhz720@gmail.com>
+Date: Thu, 12 Jun 2025 07:45:47 +0800
+Subject: [PATCH] version separate
+
+Signed-off-by: RooGhz720 <RooGhz720@gmail.com>
+---
+ config/version.mk | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/config/version.mk b/config/version.mk
+index af92b381..a8f6a661 100644
+--- a/config/version.mk
++++ b/config/version.mk
+@@ -13,7 +13,7 @@
+ # limitations under the License.
+ 
+ ANDROID_VERSION := 15
+-INFINITYVERSION := 2.9
++INFINITYVERSION := 2.9.2
+ 
+ INFINITY_BUILD_TYPE ?= UNOFFICIAL
+ INFINITY_MAINTAINER ?= UNKNOWN
+-- 
+2.34.1
+
